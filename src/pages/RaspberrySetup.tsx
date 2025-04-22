@@ -157,7 +157,7 @@ const RaspberrySetup = () => {
                     <p>crontab -e</p>
                     <p>&nbsp;</p>
                     <p># Aggiungi questa riga (per esecuzione alle 7:00)</p>
-                    <p>0 7 * * * cd /percorso/al/progetto && /usr/bin/node scripts/generateAndSend.js >> logs/morning-meld.log 2>&1</p>
+                    <p>0 7 * * * cd /percorso/al/progetto && /usr/bin/node scripts/generateAndSend.js {'>>'} logs/morning-meld.log 2{'>'}&#38;1</p>
                   </div>
                 </div>
 
