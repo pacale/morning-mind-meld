@@ -44,7 +44,32 @@ const SetupTab = () => (
         </div>
       </div>
       <div>
-        <h3 className="font-semibold text-lg mb-2">3. Configurazione API Google</h3>
+        <h3 className="font-semibold text-lg mb-2">3. Configurazione GitHub</h3>
+        <p className="mb-2">Se GitHub richiede username e password durante git clone o git pull:</p>
+        <div className="bg-muted p-3 rounded-md font-mono text-sm">
+          <p># Configurazione globale del nome utente e email</p>
+          <p>git config --global user.name "Il tuo nome"</p>
+          <p>git config --global user.email "tua.email@example.com"</p>
+          <p>&nbsp;</p>
+          <p># Configurazione del token di accesso personale (PAT)</p>
+          <p># 1. Visita: https://github.com/settings/tokens</p>
+          <p># 2. Clicca su "Generate new token" e segui le istruzioni</p>
+          <p># 3. Utilizza il token come password quando richiesto</p>
+          <p>&nbsp;</p>
+          <p># Salvataggio delle credenziali nella cache (evita richieste ripetute)</p>
+          <p>git config --global credential.helper cache</p>
+          <p>git config --global credential.helper 'cache --timeout=3600'</p>
+          <p>&nbsp;</p>
+          <p># Alternativa: salvataggio permanente</p>
+          <p>git config --global credential.helper store</p>
+        </div>
+        <div className="bg-yellow-50 border border-yellow-200 p-3 rounded-md mt-2 text-sm text-yellow-800">
+          <p className="font-semibold">Nota sulla sicurezza:</p>
+          <p>La modalità 'store' salva le credenziali in chiaro. Usala solo su dispositivi personali sicuri.</p>
+        </div>
+      </div>
+      <div>
+        <h3 className="font-semibold text-lg mb-2">4. Configurazione API Google</h3>
         <p className="mb-2">Per accedere a Google Calendar e Gmail, è necessario configurare le API Google:</p>
         <ol className="list-decimal pl-6 space-y-1">
           <li>Visita la Google Cloud Console e crea un nuovo progetto</li>
